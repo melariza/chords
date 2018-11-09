@@ -1,0 +1,294 @@
+html, body
+{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	
+	margin: 0;
+	border: 0;
+	padding: 0;
+	
+	font-family: "Homenaje", sans-serif;
+	font-size: 1.25em;
+}
+
+
+div
+{
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+
+
+.cell-stretch
+{
+	justify-self: stretch;
+	align-self: stretch;
+}
+
+
+.cell-scroll
+{
+	justify-self: stretch;
+	align-self: stretch;
+	overflow-y: scroll;
+}
+
+
+.toolbox-button
+{
+	border: 0px solid black;
+	border-radius: 0.5em;
+	background-color: #ddd;
+	box-shadow: 0 0.5em 0 0 #aaa;
+	outline: none;
+}
+.toolbox-button:hover
+{
+	cursor: pointer;
+	background-color: #eee;
+	box-shadow: 0 0.5em 0 0 #ccc;
+}
+.toolbox-button:active
+{
+	position: relative;
+	top: 0.4em;
+	cursor: pointer;
+	background-color: #ccc;
+	box-shadow: 0 0.1em 0 0 #888;
+}
+
+
+.toolbox-tab
+{
+	border: 0px solid black;
+	border-radius: 0.5em;
+	background-color: #ddd;
+	box-shadow: 0 0.5em 0 0 #aaa;
+	outline: none;
+}
+.toolbox-tab:hover
+{
+	cursor: pointer;
+	background-color: #eee;
+	box-shadow: 0 0.5em 0 0 #ccc;
+}
+.toolbox-tab:active
+{
+	position: relative;
+	top: 0.4em;
+	cursor: pointer;
+	background-color: #ccc;
+	box-shadow: 0 0.1em 0 0 #888;
+}
+.toolbox-tab-label
+{
+	font-size: 1.5em;
+	font-family: "Homenaje", sans-serif;
+}
+.toolbox-tab-icon
+{
+	font-size: 1.5em;
+}
+.toolbox-tab-selected
+{
+	position: relative;
+	top: 1em;
+	height: 100%;
+	border: 0px solid black;
+	border-radius: 0.5em;
+	background-color: #f5f5f5;
+	box-shadow: 0 1em 0 0 #f0f0f0;
+	outline: none;
+}
+
+
+.toolbox-drawer
+{
+	width: 100%;
+	height: 100%;
+	background-color: #f5f5f5;
+	z-index: 1;
+	box-shadow: 0 0.15em 0 0 rgba(0, 0, 0, 0.3);
+}
+
+
+.toolbox-select
+{
+	border: 0px solid black;
+	border-radius: 0.25em;
+	background-color: #ddd;
+	box-shadow: 0 0.15em 0 0 #aaa;
+	outline: none;
+	font-family: "Homenaje", sans-serif;
+	font-size: 1em;
+	overflow: hidden;
+}
+.toolbox-select:hover
+{
+	cursor: pointer;
+	background-color: #eee;
+	box-shadow: 0 0.15em 0 0 #ccc;
+}
+.toolbox-select:active
+{
+	position: relative;
+	top: 0.1em;
+	cursor: pointer;
+	background-color: #ccc;
+	box-shadow: 0 0.05em 0 0 #888;
+}
+
+
+.toolbox-input
+{
+	border: 0.075em solid black;
+	border-radius: 0.25em;
+	background-color: white;
+	outline: none;
+	font-family: "Homenaje", sans-serif;
+	font-size: 1em;
+	overflow: hidden;
+	text-align: center;
+}
+
+
+.toolbox-chord
+{
+	width: 6em;
+	height: 4.5em;
+	border: 0px solid black;
+	border-radius: 0.5em;
+	background-color: white;
+	box-shadow: 0 0.3em 0 0 #aaa;
+	outline: none;
+	overflow: hidden;
+}
+.toolbox-chord:hover
+{
+	cursor: pointer;
+	background-color: #fdfdfd;
+	box-shadow: 0 0.3em 0 0 #ccc;
+}
+.toolbox-chord:active
+{
+	position: relative;
+	top: 0.1em;
+	cursor: pointer;
+	background-color: #ccc;
+	box-shadow: 0 0.1em 0 0 #888;
+}
+.toolbox-chord-label
+{
+	font-size: 2em;
+	font-family: "Homenaje", sans-serif;
+	position: relative;
+	top: -0.1em;
+}
+.toolbox-chord-label-bottom
+{
+	font-size: 1.25em;
+	font-family: "Homenaje", sans-serif;
+	position: relative;
+	top: -0.35em;
+}
+
+
+#main
+{
+	width: 100%;
+	height: calc(100% - 0.25em);
+	padding-top: 0.25em;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 1fr 0fr 6em;
+	grid-gap: 0.5em 0;
+	justify-items: center;
+	align-items: center;
+}
+
+
+#toolbox
+{
+	display: grid;
+	grid-template-columns: 0fr 0fr 2em 7em 2em 0fr 0fr 0fr 0fr 0fr;
+	grid-template-rows: 0fr;
+	grid-gap: 0.25em 0.25em;
+	justify-items: center;
+	align-items: center;
+}
+
+
+#toolbox-drawer
+{
+	display: grid;
+	grid-template-columns: 0fr;
+	grid-template-rows: 0fr;
+	justify-items: center;
+	align-items: center;
+}
+
+
+#toolbox-drawer-file
+{
+	padding: 0.5em;
+	display: grid;
+	grid-template-columns: 4em 4em 4em 6em 7em;
+	grid-template-rows: 1fr;
+	grid-gap: 0.25em 0.25em;
+	justify-items: center;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	align-content: center;
+}
+
+
+#toolbox-drawer-markers
+{
+	padding: 0.5em;
+	display: grid;
+	grid-template-columns: 10em 7em 5em 4em;
+	grid-template-rows: 0fr 0fr;
+	grid-gap: 0.25em 0.25em;
+	justify-items: center;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+}
+
+
+#toolbox-drawer-notes-chords
+{
+	padding: 0.5em;
+	display: grid;
+	grid-template-columns: 0fr 0fr 0fr 0fr 0fr 0fr 0fr 0fr;
+	grid-template-rows: 0fr 0fr 0fr;
+	grid-gap: 0.25em 0.25em;
+	justify-items: center;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+}
+
+
+#toolbox-drawer-settings
+{
+	padding: 0.5em;
+	display: grid;
+	grid-template-columns: 8em;
+	grid-template-rows: 0fr 0fr;
+	grid-gap: 0.25em 0.25em;
+	justify-items: start;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+}
+
+
+#editor
+{
+	width: 100%;
+	height: 100%;
+}
